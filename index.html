@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Less colors by Jason Robb. Making visual design in the browser a bit easier.</title>
+	<title>Less colors by Jason Robb</title>
 	<link href="css/example.css" rel="stylesheet">
 	<link href="css/code.css" rel="stylesheet">
 </head>
 <body>
 
-	<h1>Less colors <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
+	<h1>More colors <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
 	<div class="lead">
 		<p>Mixing colors with <a href="http://lesscss.org/">LessCSS</a> to speed up visual design in the browser. <a href="http://github.com/jasonrobb/less-css/">Fork it at Github</a>, or something like that.</p>
 	
@@ -29,7 +29,39 @@
 					<span class="dark5"></span>
 				</div>
 			</div>
+			<div class="orange">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
 			<div class="yellow">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
+			<div class="lime">
 				<div>
 					<span class="light1"></span>
 					<span class="light2"></span>
@@ -77,8 +109,72 @@
 					<span class="dark5"></span>
 				</div>
 			</div>
-		</div>
-	</div>
+			<div class="purple">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
+			<div class="magenta">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
+			<div class="pink">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
+			<div class="gray">
+				<div>
+					<span class="light1"></span>
+					<span class="light2"></span>
+					<span class="light3"></span>
+					<span class="light4"></span>
+					<span class="light5"></span>
+				</div>
+				<div>
+					<span class="dark1"></span>
+					<span class="dark2"></span>
+					<span class="dark3"></span>
+					<span class="dark4"></span>
+					<span class="dark5"></span>
+				</div>
+			</div>
+		</div><!-- end .grid -->
+	</div><!-- end .lead -->
 		
 	<div class="features">
 		<h2>White to transparent</h2>
@@ -114,26 +210,7 @@
 			</div>
 		</div>
 
-		<h3>Example of white to transparent</h3>
-		<div class="example">
-			<div class="grid red">
-				<div>
-					<span class="light1">@white10</span>
-					<span class="light2">@white25</span>
-					<span class="light3">@white50</span>
-					<span class="light4">@white75</span>
-					<span class="light5">@white90</span>
-				</div>
-				<div>
-					<span class="dark1">@black10</span>
-					<span class="dark2">@black25</span>
-					<span class="dark3">@black50</span>
-					<span class="dark4">@black75</span>
-					<span class="dark5">@black90</span>
-				</div>
-			</div>
-		</div>
-
+		<hr />
 		
 		<h2>Black to transparent</h2>
 		<p>Mix black with the background color. The further from <code>@black99</code> you go, the more transparent the Black.</p>
@@ -168,6 +245,8 @@
 			</div>
 		</div>
 		
+		<hr />
+		
 		<h2>Shades of gray</h2>
 		<p>Solid grayscale colors. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
 	
@@ -200,83 +279,6 @@
 		
 	</div><!-- end .features -->
 
-
-	<h2>Examples of mixing colors</h2>
-	<div class="color">
-		<div class="grid red">
-			<div>
-				<span class="light1">@white10</span>
-				<span class="light2">@white25</span>
-				<span class="light3">@white50</span>
-				<span class="light4">@white75</span>
-				<span class="light5">@white90</span>
-			</div>
-			<div>
-				<span class="dark1">@black10</span>
-				<span class="dark2">@black25</span>
-				<span class="dark3">@black50</span>
-				<span class="dark4">@black75</span>
-				<span class="dark5">@black90</span>
-			</div>
-		</div>
-	</div>
-	
-	<div class="color">
-		<div class="grid yellow">
-			<div>
-				<span class="light1">@white10</span>
-				<span class="light2">@white25</span>
-				<span class="light3">@white50</span>
-				<span class="light4">@white75</span>
-				<span class="light5">@white90</span>
-			</div>
-			<div>
-				<span class="dark1">@black10</span>
-				<span class="dark2">@black25</span>
-				<span class="dark3">@black50</span>
-				<span class="dark4">@black75</span>
-				<span class="dark5">@black90</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="color">
-		<div class="grid green">
-			<div>
-				<span class="light1">@white10</span>
-				<span class="light2">@white25</span>
-				<span class="light3">@white50</span>
-				<span class="light4">@white75</span>
-				<span class="light5">@white90</span>
-			</div>
-			<div>
-				<span class="dark1">@black10</span>
-				<span class="dark2">@black25</span>
-				<span class="dark3">@black50</span>
-				<span class="dark4">@black75</span>
-				<span class="dark5">@black90</span>
-			</div>
-		</div>
-	</div>
-	
-	<div class="color">
-		<div class="grid blue">
-			<div>
-				<span class="light1">@white10</span>
-				<span class="light2">@white25</span>
-				<span class="light3">@white50</span>
-				<span class="light4">@white75</span>
-				<span class="light5">@white90</span>
-			</div>
-			<div>
-				<span class="dark1">@black10</span>
-				<span class="dark2">@black25</span>
-				<span class="dark3">@black50</span>
-				<span class="dark4">@black75</span>
-				<span class="dark5">@black90</span>
-			</div>
-		</div>
-	</div>
 
 	<footer>
 		<p><a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012</p>
