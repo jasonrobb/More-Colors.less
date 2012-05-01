@@ -6,7 +6,7 @@ pre {
   color: #2e2e2e;
   font-family: Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
-  padding: 20.25px;
+  padding: 16px;
 }
 code {
   background-color: #ffffff;
@@ -23,7 +23,7 @@ pre {
   color: #ffffff;
   display: block;
   line-height: 22px;
-  margin: 27px 0 13.5px;
+  margin: 16px 0 0;
   white-space: pre;
   white-space: pre-wrap;
   word-break: break-all;

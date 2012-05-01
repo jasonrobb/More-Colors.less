@@ -1,30 +1,82 @@
+/* !======================== */
+/* != Markup free clearing = */
+/* ========================= Details: http://www.positioniseverything.net/easyclearing.html */
+.group:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.group {
+  display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .group {
+  height: 1%;
+}
+.group {
+  display: block;
+}
+/* End hide from IE-mac */
 body {
   background-color: #f2f0ed;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  font-family: serif;
-  line-height: 27px;
+  font-family: sans-serif;
+  line-height: 1.5;
   max-width: 44em;
   margin: 0 auto;
 }
+h1,
+h2,
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+}
 h1 {
   color: #c33;
-  font-size: 233.333%;
-  margin-top: 27px;
+  font-size: 3em;
 }
 h1 small {
+  color: rgba(0, 0, 0, 0.4);
   font-size: 18px;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.5);
+  font-weight: normal;
+  margin-top: 6px;
 }
 h2 {
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 175%;
-  margin-top: 24px;
+  color: #128f74;
+  font-size: 1.75em;
+  line-height: 1;
+}
+h3 {
+  color: #07342b;
+  font-size: .9em;
+  text-transform: uppercase;
 }
 p {
-  line-height: 27px;
+  line-height: 24px;
   margin: 14px 0 0;
+}
+.lead {
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.9);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 1.333em;
+  line-height: 1.35;
+  margin: 1em 0;
+  padding: 1em 1.25em;
+}
+hr {
+  display: block;
+  clear: both;
+  margin: 27px 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 footer {
   clear: both;
@@ -33,6 +85,15 @@ footer {
   text-align: center;
   width: 100%;
 }
+.input {
+  float: left;
+  margin-right: 5%;
+  width: 45%;
+}
+.output {
+  float: left;
+  width: 50%;
+}
 .color {
   display: block;
   float: left;
@@ -40,11 +101,44 @@ footer {
   margin-bottom: 2em;
   width: 45%;
 }
+/*
+.example {
+	display: block;
+	clear: both;
+	margin-bottom: 3em;
+	padding-top: 1px;
+	width: 100%;
+	
+	.grid {
+		height: 50px;
+		margin-top: 0;
+		
+		div {
+			color: black;
+			width: 100%;
+			}
+		
+		span {
+			display: inline-block;
+			float: left;
+			font-size: 12px;
+			height: 25px;
+			width: 6%;
+			padding: 2%;
+			-webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+			-moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+			box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+*/
 .grid {
   background-color: white;
   color: black;
-  height: 250px;
-  padding-top: 50px;
+  font-size: 12px;
+  height: 125px;
+  margin-top: 27px;
+  padding-top: 25px;
   width: 100%;
 }
 .grid div {
@@ -54,8 +148,110 @@ footer {
 }
 .grid span {
   display: block;
-  height: 50px;
+  height: 25px;
   width: 100%;
+}
+.lead .grid {
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+.lead .grid div {
+  height: 150px;
+  width: 25%;
+}
+.lead .grid div div {
+  float: left;
+  margin-top: 25px;
+  height: 125px;
+  width: 50%;
+}
+.lead .grid span {
+  width: 102%;
+}
+.white,
+.black {
+  background-color: transparent;
+}
+.white1 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.white2 {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.white3 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.white4 {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.white5 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.white6 {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.white7 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.white8 {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.white9 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.black1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.black2 {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.black3 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.black4 {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.black5 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.black6 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.black7 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.black8 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.black9 {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.gray1 {
+  background-color: #191919;
+}
+.gray2 {
+  background-color: #333333;
+}
+.gray3 {
+  background-color: #4d4d4d;
+}
+.gray4 {
+  background-color: #666666;
+}
+.gray5 {
+  background-color: #808080;
+}
+.gray6 {
+  background-color: #999999;
+}
+.gray7 {
+  background-color: #b3b3b3;
+}
+.gray8 {
+  background-color: #cccccc;
+}
+.gray9 {
+  background-color: #e6e6e6;
 }
 .red {
   background-color: red;
