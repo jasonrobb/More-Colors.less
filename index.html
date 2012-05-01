@@ -2,15 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Less colors by Jason Robb</title>
+	<title>More colors by Jason Robb</title>
 	<link href="css/example.css" rel="stylesheet">
 	<link href="css/code.css" rel="stylesheet">
 </head>
 <body>
+<div class="header"></div>
+<div class="container">
 
-	<h1>More colors <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
+	<h1>More Colors <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
 	<div class="lead">
-		<p>Mixing colors with <a href="http://lesscss.org/">LessCSS</a> to speed up visual design in the browser. <a href="http://github.com/jasonrobb/less-css/">Fork it at Github</a>, or something like that.</p>
+		<div class="download">
+			<a href="http://github.com/jasonrobb/more-colors/">Download <span>More Colors on Github &rarr;</span></a>
+		</div>
+		
+		<p>White, black, and grayscale variables for designing in the browser.</p>
 	
 		<div class="grid">
 			<div class="red">
@@ -175,10 +181,50 @@
 			</div>
 		</div><!-- end .grid -->
 	</div><!-- end .lead -->
-		
+	
+	<div class="briefly group">
+	<h2>White, Black, and Grayscale</h2>
+	<div>
+		<h3>White to transparent</h3>
+		<pre><code>// @white##
+@white1:  fade(@white, 1%);
+...
+@white99: fade(@white, 99%);</code></pre>
+		<p>Mix white with the background color. The further from <code>@white99</code> you go, the more transparent the White. I've excluded <code>@white100</code> and <code>@white0</code> because the former would be solid white and the latter would be completely transparent.</p>
+	</div>
+	<div>
+		<h3>Black to transparent</h3>
+		<pre><code>// @black##
+@black1:  fade(@black, 1%);
+...
+@black99:  fade(@black, 99%);</code></pre>
+		<p>Mix black with the background color. The further from <code>@black99</code> you go, the more transparent the Black.</p>
+	</div>
+	<div>
+		<h3>Solid grayscale</h3>
+		<pre><code>// @gray##
+@white1:  fade(@white, 1%);
+...
+@white99: fade(@white, 99%);</code></pre>
+		<p>Solid grayscale colors. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
+	</div>
+	</div><!-- end .briefly -->
+	
+	<hr />
+	
+	<h2>Best used in...</h2>
+	<p>Try using these variables to:</p>
+	<ul>
+		<li>set the background-color a little lighter or darker</li>
+		<li>making <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border</li>
+		<li>use for mixing colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey, it's helped me.</li>
+	</ul>
+	
+	<hr />
+	
 	<div class="features">
 		<h2>White to transparent</h2>
-		<p>Mix white with the background color. The further from <code>@white99</code> you go, the more transparent the White. I've excluded <code>@white100</code> and <code>@white0</code> because the former would be solid white and the latter would be completely transparent.</p>
+		
 		
 		<div class="group">
 			<div class="input">
@@ -213,8 +259,6 @@
 		<hr />
 		
 		<h2>Black to transparent</h2>
-		<p>Mix black with the background color. The further from <code>@black99</code> you go, the more transparent the Black.</p>
-		
 		<div class="group">
 			<div class="input">
 				<h3>Input</h3>
@@ -248,12 +292,10 @@
 		<hr />
 		
 		<h2>Shades of gray</h2>
-		<p>Solid grayscale colors. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
-	
 		<div class="group">
 			<div class="input">
 				<h3>Input</h3>
-				<pre><code>// Mix solids for grayscale
+				<pre><code>// Solid grayscale
 @gray99: mix(@black, @white, 1%);
 @gray98: mix(@black, @white, 2%);
 @gray97: mix(@black, @white, 3%);
@@ -266,7 +308,7 @@
 	
 			<div class="output">
 				<h3>Output</h3>
-				<pre><code>// Mix solids for grayscale
+				<pre><code>// Solid grayscale
 @gray1: #fcfcfc;
 @gray2: #fafafa;
 @gray3: #f7f7f7;
@@ -277,11 +319,24 @@
 			</div>
 		</div>
 		
+		<hr />
+		
+	
+		<h2>Why do this?</h2>
+		<p>Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
+	
+		<h2>Aren't there better ways to do this?</h2>
+		<p>Probably.</p>
+		
+		<h2>Why not just use <code>lighten(@color, 20);</code></h2>
+		<p>Because that's quite a few more characters than typing <code>@white20</code>.</p>
+		
 	</div><!-- end .features -->
 
+</div><!-- end .container -->
 
-	<footer>
-		<p><a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012</p>
-	</footer>
+<footer>
+	<p><a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012</p>
+</footer>
 </body>
 </html>
