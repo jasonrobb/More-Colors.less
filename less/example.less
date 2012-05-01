@@ -1,0 +1,130 @@
+// CSS FOR EXAMPLE
+// ---------------
+
+@import "colors.less";
+
+
+// Basics
+body {
+	background-color: #f2f0ed;
+	color: @black60;
+	font-size: 18px;
+	font-family: serif;
+	line-height: 27px;
+	max-width: 44em;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #c33;
+	font-size: 233.333%;
+	margin-top: 27px;
+	
+	small {
+		font-size: 18px;
+		font-style: italic;
+		color: @black50;
+		}
+}
+
+h2 {
+	color: @black60;
+	font-size: 175%;
+	margin-top: 24px;
+}
+
+p {
+	line-height: 27px;
+	margin: 14px 0 0;
+}
+
+footer {
+	clear: both;
+	display: block;
+	padding: 2em 0;
+	text-align: center;
+	width: 100%;
+	}
+
+// Contain the colors
+.color {
+	display: block;
+	float: left;
+	margin-right: 5%;
+	margin-bottom: 2em;
+	width: 45%;
+	}
+
+// Grid of colors
+.grid {
+	background-color: white;
+	color: black;
+	height: 250px;
+	padding-top: 50px;
+	width: 100%;
+	
+	div {
+		float: left;
+		height: 50px;
+		width: 50%;
+		}
+	span {
+		display: block;
+		height: 50px;
+		width: 100%;
+		}
+	}
+
+
+.red {
+	background-color: red;
+	}
+
+.yellow {
+	background-color: yellow;
+	}
+
+.green {
+	background-color: green;
+	}
+
+.blue {
+	background-color: blue;
+	}
+
+// Lighten background
+.light1 {
+	background-color: @white10;
+	}
+.light2 {
+	background-color: @white25;
+	}
+.light3 {
+	background-color: @white50;
+	}
+.light4 {
+	background-color: @white75;
+	}
+.light5 {
+	background-color: @white90;
+	}
+
+// Darken background
+.dark1 {
+	background-color: @black10;
+	}
+.dark2 {
+	background-color: @black25;
+	}
+.dark3 {
+	background-color: @black50;
+	color: white;
+	}
+.dark4 {
+	background-color: @black75;
+	color: white;
+	}
+.dark5 {
+	background-color: @black90;
+	color: white;
+	}

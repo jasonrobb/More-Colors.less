@@ -1,0 +1,104 @@
+body {
+  background-color: #f2f0ed;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  font-family: serif;
+  line-height: 27px;
+  max-width: 44em;
+  margin: 0 auto;
+}
+h1 {
+  color: #c33;
+  font-size: 233.333%;
+  margin-top: 27px;
+}
+h1 small {
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.5);
+}
+h2 {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 175%;
+  margin-top: 24px;
+}
+p {
+  line-height: 27px;
+  margin: 14px 0 0;
+}
+footer {
+  clear: both;
+  display: block;
+  padding: 2em 0;
+  text-align: center;
+  width: 100%;
+}
+.color {
+  display: block;
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 2em;
+  width: 45%;
+}
+.grid {
+  background-color: white;
+  color: black;
+  height: 250px;
+  padding-top: 50px;
+  width: 100%;
+}
+.grid div {
+  float: left;
+  height: 50px;
+  width: 50%;
+}
+.grid span {
+  display: block;
+  height: 50px;
+  width: 100%;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: blue;
+}
+.light1 {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.light2 {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.light3 {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.light4 {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.light5 {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.dark1 {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.dark2 {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.dark3 {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.dark4 {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+.dark5 {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+}

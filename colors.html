@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Less colors by Jason Robb. Making visual design in the browser a bit easier.</title>
+	<link href="css/example.css" rel="stylesheet">
+	<link href="css/code.css" rel="stylesheet">
+</head>
+<body>
+
+	<h1>Less colors <small>by <a href="http://jasonrobb.com">Jason Robb</a>. Making visual design in the browser a bit easier</small></h1>
+	<p>Creating background colors or slightly faded text is pretty easy with Less. But it could be easier.</p>
+	
+	<p><a href="http://github.com/jasonrobb/less-css/">Fork it at Github</a>, or something like that.</p>
+	
+<pre><code>// Colors.less
+// A variety of colors and transparency
+// to make designing in the browser a lot easier
+// ---------------------------------------------
+
+@white: #fff;
+@black: #000;
+
+// White
+@white1:  fade(@white, 1%);
+@white2:  fade(@white, 2%);
+@white3:  fade(@white, 3%);
+...
+@white97: fade(@white, 97%);
+@white98: fade(@white, 98%);
+@white99: fade(@white, 99%);
+
+// Black
+@black1:  fade(@black, 1%);
+@black2:  fade(@black, 2%);
+@black3:  fade(@black, 3%);
+...
+@black97: fade(@black, 97%);
+@black98: fade(@black, 98%);
+@black99: fade(@black, 99%);
+
+
+// Mix for gray scale
+@gray99: mix(@black, @white, 1%);
+@gray98: mix(@black, @white, 2%);
+@gray97: mix(@black, @white, 3%);
+...
+@gray3: mix(@black, @white, 97%);
+@gray2: mix(@black, @white, 98%);
+@gray1: mix(@black, @white, 99%);
+</code></pre>
+
+	<div class="color">
+		<h2>Red</h2>
+		<div class="grid red">
+			<div>
+				<span class="light1">@white10</span>
+				<span class="light2">@white25</span>
+				<span class="light3">@white50</span>
+				<span class="light4">@white75</span>
+				<span class="light5">@white90</span>
+			</div>
+			<div>
+				<span class="dark1">@black10</span>
+				<span class="dark2">@black25</span>
+				<span class="dark3">@black50</span>
+				<span class="dark4">@black75</span>
+				<span class="dark5">@black90</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="color">
+		<h2>Yellow</h2>
+		<div class="grid yellow">
+			<div>
+				<span class="light1">@white10</span>
+				<span class="light2">@white25</span>
+				<span class="light3">@white50</span>
+				<span class="light4">@white75</span>
+				<span class="light5">@white90</span>
+			</div>
+			<div>
+				<span class="dark1">@black10</span>
+				<span class="dark2">@black25</span>
+				<span class="dark3">@black50</span>
+				<span class="dark4">@black75</span>
+				<span class="dark5">@black90</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="color">
+		<h2>Green</h2>
+		<div class="grid green">
+			<div>
+				<span class="light1">@white10</span>
+				<span class="light2">@white25</span>
+				<span class="light3">@white50</span>
+				<span class="light4">@white75</span>
+				<span class="light5">@white90</span>
+			</div>
+			<div>
+				<span class="dark1">@black10</span>
+				<span class="dark2">@black25</span>
+				<span class="dark3">@black50</span>
+				<span class="dark4">@black75</span>
+				<span class="dark5">@black90</span>
+			</div>
+		</div>
+	</div>
+	
+	<div class="color">
+		<h2>Blue</h2>
+		<div class="grid blue">
+			<div>
+				<span class="light1">@white10</span>
+				<span class="light2">@white25</span>
+				<span class="light3">@white50</span>
+				<span class="light4">@white75</span>
+				<span class="light5">@white90</span>
+			</div>
+			<div>
+				<span class="dark1">@black10</span>
+				<span class="dark2">@black25</span>
+				<span class="dark3">@black50</span>
+				<span class="dark4">@black75</span>
+				<span class="dark5">@black90</span>
+			</div>
+		</div>
+	</div>
+	
+
+	<footer>
+		<p><a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012</p>
+	</footer>
+</body>
+</html>
