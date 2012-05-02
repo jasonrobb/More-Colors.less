@@ -41,7 +41,10 @@ body {
   color: rgba(255, 255, 255, 0.7);
   font-size: .75em;
   height: 35px;
-  padding: .25em 1em;
+  padding: .75em 1em .25em;
+}
+.header p {
+  margin: 0;
 }
 .header a {
   border: none;
