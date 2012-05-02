@@ -1,4 +1,4 @@
-# More Colors
+# More-Colors.less by Jason Robb
 
 White, black, and grayscale variables for easier color manipulation while you design in the browser.
 
@@ -6,8 +6,6 @@ White, black, and grayscale variables for easier color manipulation while you de
 
 Use any variable from <code>@white1</code> to <code>@white99</code>, the lower the number, the more transparent the color.
 Black and white work the same way. The higher the suffix number, the more solid (i.e. not transparent) the color will be.
-
-### White to transparent
 
 	// syntax: 	@white##
 	// 			@black##
@@ -27,8 +25,6 @@ Black and white work the same way. The higher the suffix number, the more solid 
 ## Solid grayscale colors
 
 Grayscale colors are solid, as in they have no transparency. I found these to be useful sometimes when I didn't want the <code>background-color</code> to bleed through. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.
-
-### Grayscale solid colors
 
 	// syntax: @gray##
 	
