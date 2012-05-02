@@ -65,12 +65,18 @@ footer {
 	background-image: url("../assets/edge.top.png");
 	background-position: -50% 0;
 	background-repeat: repeat-x;
+	color: @black60;
 	clear: both;
 	display: block;
+	font-size: 18px;
 	margin-top: 1em;
 	padding: 2em 0;
 	text-align: center;
 	width: 100%;
+
+	a {
+		color: @black70;
+		}
 	}
 
 // Type
@@ -157,7 +163,18 @@ hr {
 	margin: .75em 0 2em 5%;
 	width: 40%;
 
-	a {	
+	p {
+		color: @black30;
+		clear: both;
+		padding: 1em 0 0 2em;
+		font-size: 14px;
+		
+		a {
+			color: @black40;
+			}
+		}
+
+	div a {	
 		background-image: url("../assets/less-icon-48.png");
 		background-position: 1em 50%;
 		background-repeat: no-repeat;
@@ -195,7 +212,7 @@ hr {
 			}
 		}
 		
-	a:hover {
+	div a:hover {
 		background-color: lighten(#4dbfa4, 5);
 		}
 	}
@@ -218,14 +235,20 @@ hr {
 		border-radius: 			3px;
 		margin-top: 1em;
 		margin-right: 0;
+		padding: 0 0 12px;
 		overflow: hidden;
 		width: 100%;
 		
 		div {
-			margin-right: 0;
-			padding-top: 5px;
-			height: 45px;
-			width: 100%;
+			background-color: transparent;
+			-webkit-border-radius: 	3px;
+			-moz-border-radius: 	3px;
+			border-radius: 			3px;
+			height: 50px;
+			margin: 10px 0;
+			padding: 0 5%;
+			overflow: hidden;
+			width: 90%;
 			
 			span {
 				display: block;
@@ -240,10 +263,10 @@ hr {
 			}
 		
 		.swatch {
-			padding: 2.5%;
+			padding: 7px 5% 0;
 			text-shadow: 0 1px 0 @white20;
 			height: 25px;
-			width: 95%;
+			width: 90%;
 			}
 		}
 	}
@@ -326,7 +349,7 @@ hr {
 .gray2 { 	background-color: @gray20; color: @white90; }
 .gray3 { 	background-color: @gray30; color: @white90; }
 .gray4 { 	background-color: @gray40; color: @white90; }
-.gray5 { 	background-color: @gray50; color: @white90; }
+.gray5 { 	background-color: @gray55; color: @white90; }
 .gray6 { 	background-color: @gray60; }
 .gray7 { 	background-color: @gray70; }
 .gray8 { 	background-color: @gray80; }

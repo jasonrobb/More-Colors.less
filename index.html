@@ -10,11 +10,12 @@
 <div class="header"></div>
 <div class="container">
 
-	<h1>Colors.less <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
+	<h1>More-Colors.less <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
 	
 	<div class="lead">
 		<div class="download">
-			<a href="http://github.com/jasonrobb/more-colors/">Download <span>More Colors on Github &rarr;</span></a>
+			<div><a href="http://github.com/jasonrobb/more-colors/">Download <span>More-Colors.less on Github &rarr;</span></a></div>
+			<p>Don't be silly, use <a href="http://lesscss.org/">LessCSS</a>.</p>
 		</div>
 		
 		<p>White, black, and grayscale variables for easier color manipulation while you design in the browser.</p>
@@ -191,7 +192,7 @@
 			<p>Black and white work the same way. The higher the suffix number, the more solid (i.e. not transparent) the color will be.</p>
 			
 			<div class="grid blue">
-				<div class="swatch">Color: #09c</div>
+				<div class="swatch">Original color: #09c</div>
 				<div>
 					<span class="light1">@white10</span>
 					<span class="light2">@white30</span>
@@ -210,6 +211,7 @@
 		</div>
 	
 		<div>
+			<h3>White to transparent</h3>
 			<pre><code>// syntax: 	@white##
 // 		@black##
 
@@ -232,7 +234,7 @@
 	<div class="briefly group">
 		<h2>Solid grayscale colors</h2>
 		<div>
-			<p>Grayscale colors are solid. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
+			<p>Grayscale colors are solid, as in they have no transparency. I found these to be useful sometimes when I didn't want the <code>background-color</code> to bleed through. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
 			
 			<div class="grid gray">
 				<div class="swatch">Color: #808080 (@gray50)</div>
@@ -241,7 +243,7 @@
 					<span class="gray2">@gray20</span>
 					<span class="gray3">@gray30</span>
 					<span class="gray4">@gray40</span>
-					<span class="gray5">@gray50</span>
+					<span class="gray5">@gray55</span>
 				</div>
 				<div>
 					<span class="gray6">@gray60</span>
@@ -254,7 +256,12 @@
 		</div>
 		
 		<div>
+			<h3>Grayscale solid colors</h3>
 			<pre><code>// syntax: @gray##
+
+@black: #000;
+@white: #fff;
+
 @gray99: mix(@black, @white, 1%);
 @gray98: mix(@black, @white, 2%);
 @gray97: mix(@black, @white, 3%);
@@ -272,27 +279,53 @@
 	<h2>Best used in...</h2>
 	<p>Try using these variables to:</p>
 	<ul>
-		<li>set the background-color a little lighter or darker</li>
-		<li>making <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border</li>
-		<li>use for mixing colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey, it's helped me.</li>
+		<li>setting the background-color a little lighter or darker;</li>
+		<li>make an <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border; the horizontal rules on this page were made with these variables;</li>
+		<li>mix colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey don't knock it 'til you've tried it&mdash;it's helped me.</li>
 	</ul>
 	
 	<hr />
 	
 	<h2>How I built it</h2>
-	<p>Funny story, </p>
+	<p><a href="http://smilesoftware.com/TextExpander/">TextExpander</a> is an amazing piece of software. I was using a snippet in <code>#!/bin/sh</code> mode to generate lists really quickly. I needed to create lists super fast and a shell script was just the way to do it. Anyhow, I edited that shell script to work with these color variables. And voila, incremented numbers from 1&ndash;99. Here's that shell script, in you're interested.</p>
 	
+	<pre><code>#!/bin/sh
+
+numberA=0
+numberB=%fill:numbers%
+
+until [ $numberA == %fill:numbers% ]; do
+    echo "@black$numberB: fadeout(@black, $numberA%);"
+    numberA=$((numberA + 1))
+    numberB=$((numberB - 1))
+done</code></pre>
+
+	<p>And again, but without those TextExpander placeholder variables:</p>
+	
+	<pre><code>#!/bin/sh
+
+numberA=0
+numberB=10 # has to match the until == 10
+
+until [ $numberA == 10 ]; do
+    echo "@black$numberB: fadeout(@black, $numberA%);"
+    numberA=$((numberA + 1))
+    numberB=$((numberB - 1))
+done</code></pre>
+
+	<p>I've included the snippet in the folder /assets/ in this project.</p>
+
 	<hr />
 
 	<h2>Why do this?</h2>
 	<p>Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
 	<p>Are there better ways to do this? Probably. Don't care.</p>
 
-
 </div><!-- end .container -->
 
 <footer>
 	<p><a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012</p>
 </footer>
+
 </body>
 </html>
