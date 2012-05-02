@@ -91,6 +91,6 @@ Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploratio
 
 Are there better ways to do this? Probably. If it was designed by a human then its fallible, and there is always a better way to do it.  
 
------
+--
 
 <a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012.  
