@@ -1,11 +1,13 @@
 # More-Colors.less by Jason Robb
 
-White, black, and grayscale variables for easier color manipulation while you design in the browser.
+White, black, and grayscale variables for easier color manipulation while you design in the browser.  
+
+![Rainbow example](https://github.com/jasonrobb/More-Colors.less/blob/master/assets/rainbow.png?raw=true)  
 
 ## White, Black to transparent
 
-Use any variable from <code>@white1</code> to <code>@white99</code>, the lower the number, the more transparent the color.
-Black and white work the same way. The higher the suffix number, the more solid (i.e. not transparent) the color will be.
+Use any variable from <code>@white1</code> to <code>@white99</code>, the lower the number, the more transparent the color.  
+Black and white work the same way. The higher the suffix number, the more solid (i.e. not transparent) the color will be.  
 
 	// syntax: 	@white##
 	// 			@black##
@@ -22,9 +24,11 @@ Black and white work the same way. The higher the suffix number, the more solid 
 	@white98: fade(@white, 98%);
 	@white99: fade(@white, 99%);
 
+![White and Black mixing example](https://github.com/jasonrobb/More-Colors.less/blob/master/assets/blue.png?raw=true)  
+
 ## Solid grayscale colors
 
-Grayscale colors are solid, as in they have no transparency. I found these to be useful sometimes when I didn't want the <code>background-color</code> to bleed through. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.
+Grayscale colors are solid, as in they have no transparency. I found these to be useful sometimes when I didn't want the <code>background-color</code> to bleed through. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.  
 
 	// syntax: @gray##
 	
@@ -41,17 +45,19 @@ Grayscale colors are solid, as in they have no transparency. I found these to be
 	@gray2: mix(@black, @white, 98%);
 	@gray1: mix(@black, @white, 99%);
 
+![Grayscale mixing example](https://github.com/jasonrobb/More-Colors.less/blob/master/assets/gray.png?raw=true)  
+
 ## Best used in...
 
-Try using these variables to:
+Try using these variables to:  
 
-* setting the background-color a little lighter or darker;
-* make an <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border; the horizontal rules on this page were made with these variables;
-* mix colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey don't knock it 'til you've tried it&mdash;it's helped me.
+* setting the background-color a little lighter or darker;  
+* make an <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border; the horizontal rules on this page were made with these variables;  
+* mix colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey don't knock it 'til you've tried it&mdash;it's helped me.  
 
 ## How I built it
 
-<a href="http://smilesoftware.com/TextExpander/">TextExpander</a> is an amazing piece of software. I was using a snippet in <code>#!/bin/sh</code> mode to generate lists really quickly. I needed to create lists super fast and a shell script was just the way to do it. Anyhow, I edited that shell script to work with these color variables. And voila, incremented numbers from 1&ndash;99. Here's that shell script, in you're interested.
+<a href="http://smilesoftware.com/TextExpander/">TextExpander</a> is an amazing piece of software. I was using a snippet in <code>#!/bin/sh</code> mode to generate lists really quickly. I needed to create lists super fast and a shell script was just the way to do it. Anyhow, I edited that shell script to work with these color variables. And voila, incremented numbers from 1&ndash;99. Here's that shell script, in you're interested.  
 
 	#!/bin/sh
 	
@@ -64,7 +70,7 @@ Try using these variables to:
 	    numberB=$((numberB - 1))
 	done
 
-And again, but without those TextExpander placeholder variables:
+And again, but without those TextExpander placeholder variables:  
 	
 	#!/bin/sh
 	
@@ -77,14 +83,14 @@ And again, but without those TextExpander placeholder variables:
 	    numberB=$((numberB - 1))
 	done
 
-I've included the snippet in the folder /assets/ in this project.
+I've included the snippet in the folder /assets/ in this project.  
 
 ## Why do this?
 
-Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
+Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.  
 
-Are there better ways to do this? Probably. If it was designed by a human then its fallible, and there is always a better way to do it.
+Are there better ways to do this? Probably. If it was designed by a human then its fallible, and there is always a better way to do it.  
 
 -----
 
-<a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012.
+<a href="http://jasonrobb.com">Jason Robb</a> &copy; 2012.  
