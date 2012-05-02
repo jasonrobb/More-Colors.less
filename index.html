@@ -10,13 +10,14 @@
 <div class="header"></div>
 <div class="container">
 
-	<h1>More Colors <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
+	<h1>Colors.less <small>by <a href="http://jasonrobb.com">Jason Robb</a></small></h1>
+	
 	<div class="lead">
 		<div class="download">
 			<a href="http://github.com/jasonrobb/more-colors/">Download <span>More Colors on Github &rarr;</span></a>
 		</div>
 		
-		<p>White, black, and grayscale variables for designing in the browser.</p>
+		<p>White, black, and grayscale variables for easier color manipulation while you design in the browser.</p>
 	
 		<div class="grid">
 			<div class="red">
@@ -183,35 +184,91 @@
 	</div><!-- end .lead -->
 	
 	<div class="briefly group">
-	<h2>White, Black, and Grayscale</h2>
-	<div>
-		<h3>White to transparent</h3>
-		<pre><code>// @white##
+		<h2>White, Black to transparent</h2>
+		
+		<div>
+			<p>Use any variable from <code>@white1</code> to <code>@white99</code>, the lower the number, the more transparent the color.</p>
+			<p>Black and white work the same way. The higher the suffix number, the more solid (i.e. not transparent) the color will be.</p>
+			
+			<div class="grid blue">
+				<div class="swatch">Color: #09c</div>
+				<div>
+					<span class="light1">@white10</span>
+					<span class="light2">@white30</span>
+					<span class="light3">@white50</span>
+					<span class="light4">@white70</span>
+					<span class="light5">@white90</span>
+				</div>
+				<div>
+					<span class="dark1">@black10</span>
+					<span class="dark2">@black30</span>
+					<span class="dark3">@black50</span>
+					<span class="dark4">@black70</span>
+					<span class="dark5">@black90</span>
+				</div>
+			</div>
+		</div>
+	
+		<div>
+			<pre><code>// syntax: 	@white##
+// 		@black##
+
+@white: #fff;
+
 @white1:  fade(@white, 1%);
+@white2:  fade(@white, 2%);
+@white3:  fade(@white, 3%);
+@white4:  fade(@white, 4%);
 ...
+@white96: fade(@white, 96%);
+@white97: fade(@white, 97%);
+@white98: fade(@white, 98%);
 @white99: fade(@white, 99%);</code></pre>
-		<p>Mix white with the background color. The further from <code>@white99</code> you go, the more transparent the White. I've excluded <code>@white100</code> and <code>@white0</code> because the former would be solid white and the latter would be completely transparent.</p>
-	</div>
-	<div>
-		<h3>Black to transparent</h3>
-		<pre><code>// @black##
-@black1:  fade(@black, 1%);
-...
-@black99:  fade(@black, 99%);</code></pre>
-		<p>Mix black with the background color. The further from <code>@black99</code> you go, the more transparent the Black.</p>
-	</div>
-	<div>
-		<h3>Solid grayscale</h3>
-		<pre><code>// @gray##
-@white1:  fade(@white, 1%);
-...
-@white99: fade(@white, 99%);</code></pre>
-		<p>Solid grayscale colors. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
-	</div>
+		</div>
 	</div><!-- end .briefly -->
 	
 	<hr />
 	
+	<div class="briefly group">
+		<h2>Solid grayscale colors</h2>
+		<div>
+			<p>Grayscale colors are solid. <code>@gray99</code> is closest to white, while <code>@gray1</code> is closest to black.</p>
+			
+			<div class="grid gray">
+				<div class="swatch">Color: #808080 (@gray50)</div>
+				<div>
+					<span class="gray1">@gray10</span>
+					<span class="gray2">@gray20</span>
+					<span class="gray3">@gray30</span>
+					<span class="gray4">@gray40</span>
+					<span class="gray5">@gray50</span>
+				</div>
+				<div>
+					<span class="gray6">@gray60</span>
+					<span class="gray7">@gray70</span>
+					<span class="gray8">@gray80</span>
+					<span class="gray9">@gray90</span>
+					<span class="gray97">@gray97</span>
+				</div>
+			</div>
+		</div>
+		
+		<div>
+			<pre><code>// syntax: @gray##
+@gray99: mix(@black, @white, 1%);
+@gray98: mix(@black, @white, 2%);
+@gray97: mix(@black, @white, 3%);
+@gray96: mix(@black, @white, 4%);
+...
+@gray4: mix(@black, @white, 96%);
+@gray3: mix(@black, @white, 97%);
+@gray2: mix(@black, @white, 98%);
+@gray1: mix(@black, @white, 99%);</code></pre>
+		</div>
+	</div>
+
+	<hr />
+
 	<h2>Best used in...</h2>
 	<p>Try using these variables to:</p>
 	<ul>
@@ -222,116 +279,15 @@
 	
 	<hr />
 	
-	<div class="features">
-		<h2>White to transparent</h2>
-		
-		
-		<div class="group">
-			<div class="input">
-				<h3>Input</h3>
-				<pre><code>// White
-@white: #fff;
-
-@white1:  fade(@white, 1%);
-@white2:  fade(@white, 2%);
-@white3:  fade(@white, 3%);
-...
-@white97: fade(@white, 97%);
-@white98: fade(@white, 98%);
-@white99: fade(@white, 99%);</code></pre>
-			</div>
-
-			<div class="output">
-				<h3>Output</h3>
-				<pre><code>// White
-@white: #fff;
-
-@white1: rgba(255, 255, 255, 0.01);
-@white2: rgba(255, 255, 255, 0.02);
-@white3: rgba(255, 255, 255, 0.03);
-...
-@white97: rgba(255, 255, 255, 0.97);
-@white98: rgba(255, 255, 255, 0.98);
-@white99: rgba(255, 255, 255, 0.99);</code></pre>
-			</div>
-		</div>
-
-		<hr />
-		
-		<h2>Black to transparent</h2>
-		<div class="group">
-			<div class="input">
-				<h3>Input</h3>
-			<pre><code>// Black
-@black: #000;
-
-@black1:  fade(@black, 1%);
-@black2:  fade(@black, 2%);
-@black3:  fade(@black, 3%);
-...
-@black97: fade(@black, 97%);
-@black98: fade(@black, 98%);
-@black99: fade(@black, 99%);</code></pre>
-			</div>
-			
-			<div class="output">
-				<h3>Output</h3>
-				<pre><code>// Black
-@black: #000;
-
-@black1: rgba(0, 0, 0, 0.01);
-@black2: rgba(0, 0, 0, 0.02);
-@black3: rgba(0, 0, 0, 0.03);
-...
-@black97: rgba(0, 0, 0, 0.97);
-@black98: rgba(0, 0, 0, 0.98);
-@black99: rgba(0, 0, 0, 0.99);</code></pre>
-			</div>
-		</div>
-		
-		<hr />
-		
-		<h2>Shades of gray</h2>
-		<div class="group">
-			<div class="input">
-				<h3>Input</h3>
-				<pre><code>// Solid grayscale
-@gray99: mix(@black, @white, 1%);
-@gray98: mix(@black, @white, 2%);
-@gray97: mix(@black, @white, 3%);
-...
-@gray3: mix(@black, @white, 97%);
-@gray2: mix(@black, @white, 98%);
-@gray1: mix(@black, @white, 99%);
-</code></pre>
-			</div>
+	<h2>How I built it</h2>
+	<p>Funny story, </p>
 	
-			<div class="output">
-				<h3>Output</h3>
-				<pre><code>// Solid grayscale
-@gray1: #fcfcfc;
-@gray2: #fafafa;
-@gray3: #f7f7f7;
-...
-@gray97: #080808;
-@gray98: #050505;
-@gray99: #030303;</code></pre>
-			</div>
-		</div>
-		
-		<hr />
-		
-	
-		<h2>Why do this?</h2>
-		<p>Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
-	
-		<h2>Aren't there better ways to do this?</h2>
-		<p>Probably.</p>
-		
-		<h2>Why not just use <code>lighten(@color, 20);</code></h2>
-		<p>Because that's quite a few more characters than typing <code>@white20</code>.</p>
-		
-	</div><!-- end .features -->
+	<hr />
+
+	<h2>Why do this?</h2>
+	<p>Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
+	<p>Are there better ways to do this? Probably. Don't care.</p>
+
 
 </div><!-- end .container -->
 

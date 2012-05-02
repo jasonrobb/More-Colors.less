@@ -108,6 +108,7 @@ a {
   line-height: 1.5;
   margin: 1em 0;
   padding: .5em 1.25em 1.25em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 hr {
   display: block;
@@ -117,16 +118,10 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
-.briefly div {
-  float: left;
-  margin-right: 3%;
-  width: 30%;
-}
 .download {
   display: inline-block;
   float: right;
-  margin-top: .75em;
-  margin-left: 5%;
+  margin: .75em 0 2em 5%;
   width: 40%;
 }
 .download a {
@@ -167,6 +162,45 @@ hr {
 }
 .download a:hover {
   background-color: #60c6ae;
+}
+.briefly div {
+  float: left;
+  margin-right: 5%;
+  width: 45%;
+}
+.briefly .grid {
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-top: 1em;
+  margin-right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.briefly .grid div {
+  margin-right: 0;
+  padding-top: 5px;
+  height: 45px;
+  width: 100%;
+}
+.briefly .grid div span {
+  display: block;
+  float: left;
+  font-size: 12px;
+  padding-top: 5px;
+  height: 45px;
+  width: 20%;
+  text-indent: 5px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.briefly .grid .swatch {
+  padding: 2.5%;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  height: 25px;
+  width: 95%;
 }
 .input {
   float: left;
@@ -273,18 +307,23 @@ hr {
 }
 .gray1 {
   background-color: #191919;
+  color: rgba(255, 255, 255, 0.9);
 }
 .gray2 {
   background-color: #333333;
+  color: rgba(255, 255, 255, 0.9);
 }
 .gray3 {
   background-color: #4d4d4d;
+  color: rgba(255, 255, 255, 0.9);
 }
 .gray4 {
   background-color: #666666;
+  color: rgba(255, 255, 255, 0.9);
 }
 .gray5 {
   background-color: #808080;
+  color: rgba(255, 255, 255, 0.9);
 }
 .gray6 {
   background-color: #999999;
@@ -297,6 +336,9 @@ hr {
 }
 .gray9 {
   background-color: #e6e6e6;
+}
+.gray97 {
+  background-color: #f7f7f7;
 }
 .red {
   background-color: #c33;
@@ -342,9 +384,11 @@ hr {
 }
 .dark1 {
   background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 .dark2 {
   background-color: rgba(0, 0, 0, 0.25);
+  color: white;
 }
 .dark3 {
   background-color: rgba(0, 0, 0, 0.5);

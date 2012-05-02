@@ -137,6 +137,7 @@ a {
 	line-height: 1.5;
 	margin: 1em 0;
 	padding: .5em 1.25em 1.25em;
+	text-shadow: 0 1px 2px @black10;
 }
 
 // Horizontal rules
@@ -149,19 +150,11 @@ hr {
 	border-bottom: 1px solid @white90;
 }
 
-// Briefly
-.briefly div {
-	float: left;
-	margin-right: 3%;
-	width: 30%;
-	}
-
 // Download
 .download {
 	display: inline-block;
 	float: right;
-	margin-top: .75em;
-	margin-left: 5%;
+	margin: .75em 0 2em 5%;
 	width: 40%;
 
 	a {	
@@ -204,6 +197,54 @@ hr {
 		
 	a:hover {
 		background-color: lighten(#4dbfa4, 5);
+		}
+	}
+
+// Briefly
+.briefly div {
+	float: left;
+	margin-right: 5%;
+	width: 45%;
+	}
+
+.briefly {
+		
+	.grid {
+		-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+		-moz-box-shadow: 	0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+		box-shadow: 		0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+		-webkit-border-radius: 	3px;
+		-moz-border-radius: 	3px;
+		border-radius: 			3px;
+		margin-top: 1em;
+		margin-right: 0;
+		overflow: hidden;
+		width: 100%;
+		
+		div {
+			margin-right: 0;
+			padding-top: 5px;
+			height: 45px;
+			width: 100%;
+			
+			span {
+				display: block;
+				float: left;
+				font-size: 12px;
+				padding-top: 5px;
+				height: 45px;
+				width: 20%;
+				text-indent: 5px;
+				text-shadow: 0 1px 0 @white20;
+				}
+			}
+		
+		.swatch {
+			padding: 2.5%;
+			text-shadow: 0 1px 0 @white20;
+			height: 25px;
+			width: 95%;
+			}
 		}
 	}
 
@@ -281,15 +322,16 @@ hr {
 
 // Gray example
 .gray { 	background-color: @gray50; }
-.gray1 { 	background-color: @gray10; }
-.gray2 { 	background-color: @gray20; }
-.gray3 { 	background-color: @gray30; }
-.gray4 { 	background-color: @gray40; }
-.gray5 { 	background-color: @gray50; }
+.gray1 { 	background-color: @gray10; color: @white90; }
+.gray2 { 	background-color: @gray20; color: @white90; }
+.gray3 { 	background-color: @gray30; color: @white90; }
+.gray4 { 	background-color: @gray40; color: @white90; }
+.gray5 { 	background-color: @gray50; color: @white90; }
 .gray6 { 	background-color: @gray60; }
 .gray7 { 	background-color: @gray70; }
 .gray8 { 	background-color: @gray80; }
 .gray9 { 	background-color: @gray90; }
+.gray97 { 	background-color: @gray97; }
 
 // Color examples
 .red {
@@ -348,9 +390,11 @@ hr {
 // Darken background
 .dark1 {
 	background-color: @black10;
+	color: white;
 	}
 .dark2 {
 	background-color: @black25;
+	color: white;
 	}
 .dark3 {
 	background-color: @black50;
