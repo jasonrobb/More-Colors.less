@@ -121,8 +121,6 @@ th {
 
 
 // Fonts
-
-
 #font {
 	#family {
 		.sans-serif() {
@@ -160,8 +158,8 @@ th {
 body {
 	background-color: #f2f0ed;
 	color: @black70;
+	#font > .sans-serif();
 	font-size: @baseFontSize;
-	font-family: "OpenSans", Calibri, "Lucida Grande", Verdana, sans-serif;
 	line-height: @baseLineHeight;
 	margin: 0;
 	padding: 0;
@@ -230,14 +228,14 @@ footer {
 h1, h2, h3 {
 	margin-top: 1.5em;
 	margin-bottom: 0;
-	font-family: "Exo", Calibri, "Lucida Grande", Verdana, sans-serif;
+	#font > .display();
 	font-weight: bold;
 	text-rendering: optimizelegibility; // Fix the character spacing for headings
 	}
 
 h1 {
 	color: @red;
-	font-size: 3.5em;
+	font-size: 5em;
 	margin-top: .5em;
 	
 	small {
@@ -342,11 +340,6 @@ a {
 		}
 }
 
-// gh-pages
-.gh-pages .project {
-	margin: 1em -1.25em 3em;
-	padding: 0 1.25em 1.25em;
-	}
 
 // Horizontal rules
 hr {
@@ -503,6 +496,7 @@ hr {
 	}
 
 
+
 // Code
 code,
 pre {
@@ -555,3 +549,36 @@ pre code .line::before {
 	width: 13px;
 	text-align: right;
 }
+
+
+
+// gh-pages
+.gh-pages .project {
+	margin: 1em -1.25em 3em;
+	padding: 0 1.25em 1.25em;
+	}
+
+.gh-pages h1 {
+	font-size: 3.5em;
+	text-shadow: 0 1px 0 @black15, 0 1px 3px @black10, 0 2px 6px @black3;
+	
+	small {
+		margin-left: -.5em;
+		}
+	}
+
+
+// About
+.about img {
+	float: left;
+	
+	-webkit-box-shadow:	0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	-moz-box-shadow:	0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	box-shadow:			0 -1px 1px @black10, 0 1px 0 rgba(0, 0, 0, 0.05), 0 2px 5px rgba(0, 0, 0, 0.1), 0 6px 10px rgba(0, 0, 0, 0.03);
+	
+	-webkit-border-radius:	3px;
+	-moz-border-radius:		3px;
+	border-radius:			3px;
+	
+	margin: 0 1.5em 0 0;
+	}
