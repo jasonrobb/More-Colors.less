@@ -1,0 +1,67 @@
+body {
+  background-color: #ccc;
+  margin: 0 auto;
+  padding: 3em;
+}
+.file {
+  display: inline-block;
+  height: 40px;
+  width: 32px;
+}
+.file span {
+  background-color: white;
+  display: inline-block;
+  font-size: 22px;
+  line-height: 1;
+  height: 30px;
+  padding: 0;
+  padding-top: 10px;
+  width: 32px;
+  text-align: center;
+  background-color: #ffffff;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(-60deg, #ffffff, #e8e8e8 82%, #f8f8f8 83%, #ffffff);
+  background-image: -ms-linear-gradient(-60deg, #ffffff, #e8e8e8 82%, #f8f8f8 83%, #ffffff);
+  background-image: -webkit-linear-gradient(-60deg, #ffffff, #e8e8e8 82%, #f8f8f8 83%, #ffffff);
+  background-image: -o-linear-gradient(-60deg, #ffffff, #e8e8e8 82%, #f8f8f8 83%, #ffffff);
+  background-image: linear-gradient(-60deg, #ffffff, #e8e8e8 82%, #f8f8f8 83%, #ffffff);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0);
+  -webkit-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1), 1px -1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1), 1px -1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1), 1px -1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5);
+  color: #ddd;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.3), 0 0 3px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(255, 255, 255, 0.9), -1px -1px 3px rgba(255, 255, 255, 0.9);
+}
+.stack {
+  height: 48px;
+  width: 40px;
+}
+.stack span {
+  float: left;
+  position: relative;
+}
+.stack span:nth-child(1) {
+  margin: 8px 0 0 8px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+}
+.stack span:nth-child(2) {
+  margin: -44px 0 0 4px;
+  background-color: #ccc;
+  background-image: none;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.15), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7);
+  z-index: 2;
+}
+.stack span:nth-child(3) {
+  margin: -48px 0 0;
+  background-color: #ccc;
+  background-image: none;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.5), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7), 4px 4px 8px rgba(0, 0, 0, 0.1), 6px 10px 12px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.5), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7), 4px 4px 8px rgba(0, 0, 0, 0.1), 6px 10px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.5), 1px 3px 3px rgba(0, 0, 0, 0.1), inset 2px 2px 3px rgba(255, 255, 255, 0.7), 4px 4px 8px rgba(0, 0, 0, 0.1), 6px 10px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}

@@ -1,0 +1,137 @@
+// ==========================
+//
+// File icon with page curl
+//		using LessCSS and CSS
+// 		by Jason Robb
+// 		http://jasonrobb.com
+//
+// ==========================
+
+
+// Basic styles to accentuate the icons, mnyessssss
+body {
+	background-color: #ccc;
+	margin: 0 auto;
+	padding: 3em;
+	}
+
+// ==================
+// Single page crease
+// Example usage: .file1(#fff, #e8e8e8, 82%, #f8f8f8, 83%, #fff, -60deg);
+
+.file1(@startColor: #fff, @midColor: #e8e8e8, @colorStop: 82%, @midColor2: #f8f8f8, @colorStop2: 83%, @endColor: #fff, @deg: -60deg) {
+	background-color: @endColor;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @endColor);
+	background-image: -ms-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @endColor);
+	background-image: -webkit-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @endColor);
+	background-image: -o-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @endColor);
+	background-image: linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @endColor);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+
+
+// ==================
+// Double page crease
+// Example usage: .file2(#fff, #e4e4e4, 82%, #fafafa, 83%, #eee, 90%, #ddd, 91%, fafafa, -60deg);
+
+.file2(@startColor: #fff, @midColor: #e4e4e4, @colorStop: 82%, @midColor2: #fafafa, @colorStop2: 83%, @midColor3: #eee, @colorStop3: 90%, @midColor4: #ddd, @colorStop4: 91%, @endColor: #fafafa, @deg: -60deg) {
+	background-color: @endColor;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @midColor3 @colorStop3, @midColor4 @colorStop4, @endColor);
+	background-image: -ms-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @midColor3 @colorStop3, @midColor4 @colorStop4, @endColor);
+	background-image: -webkit-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @midColor3 @colorStop3, @midColor4 @colorStop4, @endColor);
+	background-image: -o-linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @midColor3 @colorStop3, @midColor4 @colorStop4, @endColor);
+	background-image: linear-gradient(@deg, @startColor, @midColor @colorStop, @midColor2 @colorStop2, @midColor3 @colorStop3, @midColor4 @colorStop4, @endColor);
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@endColor)); // IE9 and down, gets no color-stop at all for proper fallback
+	}
+
+// Box shadow mixin
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	box-shadow: @shadow;
+	}
+
+// ===========
+// Single file
+.file {
+	display: inline-block;
+	height: 40px;
+	width: 32px;
+	
+	span {
+		background-color: white;
+		display: inline-block;
+		font-size: 22px;
+		line-height: 1; // to bring the baseline up a bit, especially for lowercase with descenders like 'g' etc.
+		height: 30px;
+		padding: 0;
+		padding-top: 10px;
+		width: 32px;
+		text-align: center;
+		
+		// Page style
+		.file1(); // choose .file1() or .file2()
+		@shadow: -1px 1px 3px rgba(0, 0, 0, 0.1), 1px -1px 3px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.5);
+		.box-shadow(@shadow);
+		
+		// Text style
+		color: #ddd;
+		text-shadow: 0 -1px 1px rgba(0,0,0,.2), 0 -1px 0 rgba(0,0,0,.3), 0 0 3px rgba(255,255,255,.9), 1px 1px 3px rgba(255,255,255,.9), -1px -1px 3px rgba(255,255,255,.9);
+	}
+}
+
+// Stack of files
+.stack {
+	height: 48px;
+	width: 40px;
+	}
+	
+.stack span {
+	float: left;
+	position: relative;
+	}
+
+.stack span:nth-child(1) {
+	margin: 8px 0 0 8px;
+	
+	// Page style
+	@shadow: 0 0 1px rgba(0, 0, 0, 0.5),
+			0 1px 3px rgba(0, 0, 0, 0.15);
+	.box-shadow(@shadow);
+	z-index: 3;
+	}
+
+.stack span:nth-child(2) {
+	margin: -44px 0 0 4px;
+	
+	// Page style
+	background-color: #ccc;
+	background-image: none;
+	@shadow: 0 0 1px rgba(0, 0, 0, 0.5),
+			0 1px 3px rgba(0, 0, 0, 0.15),
+			
+			1px 3px 3px rgba(0, 0, 0, 0.1),
+			inset 2px 2px 3px rgba(255,255,255,.7);
+	.box-shadow(@shadow);
+	z-index: 2;
+	}
+	
+.stack span:nth-child(3) {
+	margin: -48px 0 0;
+	
+	// Page style
+	background-color: #ccc;
+	background-image: none;
+	@shadow: 0 1px 3px rgba(0, 0, 0, 0.15),
+			0 0 1px rgba(0, 0, 0, 0.5),
+			
+			1px 3px 3px rgba(0, 0, 0, 0.1),
+			inset 2px 2px 3px rgba(255,255,255,.7),
+			
+			4px 4px 8px rgba(0,0,0,.1),
+			6px 10px 12px rgba(0,0,0,.1);
+	.box-shadow(@shadow);
+	z-index: 1;
+	}
