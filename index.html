@@ -7,9 +7,12 @@
 	<link href="css/code.css" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Exo:400,700" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"><!-- Open+Sans:400italic,400,600 -->
+	<link rel="shortcut icon" href="favicon.ico?v=2">
 </head>
 <body>
-<div class="header"><p><a href="http://jasonrobb.github.com">&larr; Go back to Jason Robb on Github</a> or <a href="http://jasonrobb.com">go to jasonrobb.com</a></p></div>
+
+<div class="header"><p><a href="http://github.com/jasonrobb">&larr; Go to github.com/jasonrobb</a> or <a href="http://jasonrobb.com/">jasonrobb.com</a></p></div>
+
 <div class="container">
 
 	<h1>More-Colors.less <small>by <a href="http://jasonrobb.github.com">Jason Robb</a></small></h1>
@@ -186,6 +189,12 @@
 		</div><!-- end .grid -->
 	</div><!-- end .lead -->
 	
+	<h2>Color exploration in the browser</h2>
+	<p>Thanks to <a href="http://lesscss.org/">LessCSS</a>, I do most of my color exploration in the browser instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code> instead of my shorthand <code>@black50</code>, but that's a lot more characters and shift key usage than just typing <code>@black50</code> and being done with it.</p>
+	<p>Are there better ways to do this? Probably. Anything that's designed by a human is fallible, and so there's always a better way to do it.</p>
+	
+	<hr />
+
 	<div class="briefly group">
 		<h2>White, Black to transparent</h2>
 		
@@ -213,7 +222,6 @@
 		</div>
 	
 		<div>
-			<h3>White to transparent</h3>
 			<pre><code>// syntax: 	@white##
 // 		@black##
 
@@ -231,7 +239,6 @@
 		</div>
 	</div><!-- end .briefly -->
 	
-	<hr />
 	
 	<div class="briefly group">
 		<h2>Solid grayscale colors</h2>
@@ -258,7 +265,6 @@
 		</div>
 		
 		<div>
-			<h3>Grayscale solid colors</h3>
 			<pre><code>// syntax: @gray##
 
 @black: #000;
@@ -278,18 +284,41 @@
 
 	<hr />
 
-	<h2>Best used in...</h2>
-	<p>Try using these variables to:</p>
-	<ul>
-		<li>setting the background-color a little lighter or darker;</li>
-		<li>make an <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border; the horizontal rules on this page were made with these variables;</li>
-		<li>mix colors like this: <code>mix(@color, @white50, 50)</code> which provides an additional point of adjustment. Hey don't knock it 'til you've tried it&mdash;it's helped me.</li>
-	</ul>
+	<h2>More examples</h2>
+	
+	<h3>Horizontal rules</h3>
+	<p>Make an <code>&lt;hr /&gt;</code> with a light top border and a dark bottom border; the horizontal rules on this page were made with these variables.</p>
+	<pre><code>// Horizontal rules
+hr {
+	margin: 3em 0;
+	border: 0;
+	border-top: 1px solid @black10;
+	border-bottom: 1px solid @white90;
+}</code></pre>
+
+	
+	<h3>Links</h3>
+	<p>The links in the header of this page use these styles.</p>
+	<pre><code>// Header links
+.header {
+	a {
+		border-color: @white20;
+		color: @white70;
+		text-decoration: none;
+		}
+	
+	a:hover {
+		color: @white90;
+		}
+	}</code></pre>
+	
+	
 	
 	<hr />
 	
-	<h2>How I built it</h2>
-	<p><a href="http://smilesoftware.com/TextExpander/">TextExpander</a> is an amazing piece of software. I was using a snippet in <code>#!/bin/sh</code> mode to generate lists really quickly. I needed to create lists super fast and a shell script was just the way to do it. Anyhow, I edited that shell script to work with these color variables. And voila, incremented numbers from 1&ndash;99. Here's that shell script, in you're interested.</p>
+	<h2>How this project evolved</h2>
+	<p><a href="http://smilesoftware.com/TextExpander/">TextExpander</a> is an amazing piece of software. I was using a snippet in <code>#!/bin/sh</code> mode to generate lists really quickly. I needed to create lists super fast and a shell script was just the way to do it. </p>
+	<p>Anyhow, I edited that shell script to work with these color variables. And voila, incremented numbers from 1&ndash;99. Here's that shell script, in you're interested.</p>
 	
 	<pre><code>#!/bin/sh
 
@@ -302,7 +331,7 @@ until [ $numberA == %fill:numbers% ]; do
     numberB=$((numberB - 1))
 done</code></pre>
 
-	<p>And again, but without those TextExpander placeholder variables:</p>
+	<p>And the same script without those TextExpander placeholder variables <code>%fill:numbers%</code>:</p>
 	
 	<pre><code>#!/bin/sh
 
@@ -317,11 +346,6 @@ done</code></pre>
 
 	<p>I've included the snippet in the folder /assets/ in this project.</p>
 
-	<hr />
-
-	<h2>Why do this?</h2>
-	<p>Thanks to <a href="http://lesscss.org/">LessCSS</a> I can do my color exploration in the browser, instead of the Photoshop color palette. Sure, I could be using <code>hsla(0,0,0,0.5)</code>, but that's a lot more characters and shift key usage than just typing in <code>@black50</code> and being done with it.</p>
-	<p>Are there better ways to do this? Probably. If it was designed by a human then its fallible, and there is always a better way to do it.</p>
 
 </div><!-- end .container -->
 

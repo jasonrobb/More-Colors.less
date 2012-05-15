@@ -1,7 +1,7 @@
-// CSS FOR EXAMPLE
-// ---------------
+// Example for More-Colors.less
+// ----------------------------
 
-@import "colors.less";
+@import "more-colors.less";
 
 
 /* !======================== */
@@ -87,13 +87,18 @@ footer {
 	clear: both;
 	display: block;
 	font-size: 18px;
-	margin-top: 1em;
+	margin-top: 3em;
 	padding: 2em 0;
 	text-align: center;
 	width: 100%;
 
 	a {
+		border-color: @black30;
 		color: @black70;
+		}
+	a:hover {
+		border-color: @black50;
+		color: @black80;
 		}
 	}
 
@@ -126,7 +131,6 @@ h2 {
 	color: #2c7a68;
 	font-size: 1.75em;
 	line-height: 1;
-
 }
 
 h3 {
@@ -137,8 +141,13 @@ h3 {
 
 p {
 	line-height: 1.4;
-	margin: 14px 0 0;
+	margin: .75em 0 0;
 }
+
+p + p {
+	margin-top: .25em;
+	text-indent: 1em;
+	}
 
 a {
 	border-bottom: 1px solid;

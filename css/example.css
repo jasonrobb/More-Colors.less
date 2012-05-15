@@ -64,13 +64,18 @@ footer {
   clear: both;
   display: block;
   font-size: 18px;
-  margin-top: 1em;
+  margin-top: 3em;
   padding: 2em 0;
   text-align: center;
   width: 100%;
 }
 footer a {
+  border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.7);
+}
+footer a:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.8);
 }
 h1,
 h2,
@@ -107,7 +112,11 @@ h3 {
 }
 p {
   line-height: 1.4;
-  margin: 14px 0 0;
+  margin: .75em 0 0;
+}
+p + p {
+  margin-top: .25em;
+  text-indent: 1em;
 }
 a {
   border-bottom: 1px solid;
